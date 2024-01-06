@@ -62,12 +62,17 @@ export default function Tool() {
               </p>
             )}
             {url && (
-              <p className="text-lg">
-                This is a link with a search of that url you pasted on Twitter:&nbsp;
-                <Link href={`https://twitter.com/search?q=${url}`}>
-                  <span className="text-blue-500">https://twitter.com/search?q={url}</span>
-                </Link>
-              </p>
+              <>
+                <p className="text-lg">
+                    This is a link with a search of that url you pasted on Twitter:&nbsp;
+                    <Link href={`https://twitter.com/search?q=${url}`}>
+                    <span className="text-blue-500">https://twitter.com/search?q={url}</span>
+                    </Link>
+                </p>
+                <small>
+                    See if there are any tweets about this link. If there are, check the replies to see if anyone has reported it as a phishing link.
+                </small>
+              </>
             )}
             <p className="text-sm mt-2 italic">
               Disclaimer: This tool is for educational purposes only and does not guarantee the safety of any link. Please use your own judgment and verify links independently. We are not responsible for any damages or losses incurred by using this tool.
