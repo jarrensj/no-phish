@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 
 export default function Tool() {
   const [url, setUrl] = useState<string>('');
@@ -58,6 +59,14 @@ export default function Tool() {
                 Main Domain: {mainDomain}
                 <br />
                 <small>Note: Using subdomains is a common method to deceive or phish. Always verify the authenticity of a website.</small>
+              </p>
+            )}
+            {url && (
+              <p className="text-lg">
+                This is a link with a search of that url you pasted on Twitter:&nbsp;
+                <Link href={`https://twitter.com/search?q=${url}`}>
+                  <span className="text-blue-500">https://twitter.com/search?q={url}</span>
+                </Link>
               </p>
             )}
             <p className="text-sm mt-2 italic">
