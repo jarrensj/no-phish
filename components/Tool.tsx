@@ -64,7 +64,7 @@ export default function Tool() {
             {url && (
               <>
                 <p className="text-lg">
-                    This is a link with a search of that url you pasted on Twitter:&nbsp;
+                    This is a Twitter search of that url you pasted:&nbsp;
                     <Link href={`https://twitter.com/search?q=${url}`}>
                     <span className="text-blue-500">https://twitter.com/search?q={url}</span>
                     </Link>
